@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/art-parent.iml" filepath="$PROJECT_DIR$/.idea/art-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-parent/dict-parent/dict-parent.iml" filepath="$PROJECT_DIR$/system-parent/dict-parent/dict-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-parent/system-parent.iml" filepath="$PROJECT_DIR$/system-parent/system-parent.iml" />
+    </modules>
+  </component>
+</project>
