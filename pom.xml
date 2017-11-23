@@ -24,6 +24,7 @@
     <modules>
         <module>core-parent</module>
         <module>system-parent</module>
+        <module>recruit-parent</module>
     </modules>
 
     <dependencyManagement>
