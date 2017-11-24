@@ -3,12 +3,48 @@
            xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
            xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
        http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
-    <reference id="candidateService" interface="com.kalix.art.candidate.api.biz.ICandidateBeanService"/>
+    <reference id="artCandidateService" interface="com.kalix.art.candidate.api.biz.ICandidateBeanService"/>
+    <camelContext id="artCandidateCamel" xmlns="http://camel.apache.org/schema/blueprint">
+        <restConfiguration component="servlet" bindingMode="json">
+            <dataFormatProperty key="prettyPrint" value="${rest.pretty}"/>
+        </restConfiguration>
 
-    <bean id="mycandidateRoute" class="com.kalix.framework.core.impl.camel.BaseRouteBuilder">
-        <property name="beanName" value="com.kalix.art.candidate.entities.CandidateBean"/>
-    </bean>
-    <camelContext id="mycandidateCamel" xmlns="http://camel.apache.org/schema/blueprint">
-        <routeBuilder ref="mycandidateRoute"/>
+        <!-- defines the rest services using the context-path /interview -->
+        <rest path="/artcandidates" consumes="application/json;charset=utf-8" produces="application/json;charset=utf-8">
+            <description>Art Candidate rest service</description>
+
+            <!-- this is a rest GET to find all interview -->
+            <get id="route-getAllArtCandidate" outType="com.kalix.framework.core.api.persistence.JsonData">
+                <description>Find all Art Candidate</description>
+                <to uri="bean:artCandidateService?method=getAllEntityByQuery(${header.page},${header.limit},${header.jsonStr},${header.sort})"/>
+            </get>
+
+            <!-- this is a rest POST to create a interview -->
+            <post id="route-addArtCandidate" type="com.kalix.art.candidate.entities.CandidateBean"
+                  outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Create a Art Candidate</description>
+                <to uri="bean:artCandidateService?method=saveEntity"/>
+            </post>
+
+            <!-- this is a rest GET to view a interview by the given id -->
+            <get uri="/{id}" id="route-getArtCandidate" outType="com.kalix.art.candidate.entities.CandidateBean">
+                <description>Find Art Candidate by id</description>
+                <to uri="bean:artCandidateService?method=getEntity(${header.id})"/>
+            </get>
+
+            <!-- this is a rest PUT to update a interview -->
+            <put uri="/{id}" id="route-updateArtCandidate" type="com.kalix.art.candidate.entities.CandidateBean"
+                 outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Updates a Art Candidate</description>
+                <to uri="bean:artCandidateService?method=updateEntity"/>
+            </put>
+
+            <!-- this is a rest DELETE to delete a interview -->
+            <delete uri="/{id}" id="route-deleteArtCandidate"
+                    outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Delete a Art Candidate</description>
+                <to uri="bean:artCandidateService?method=deleteEntity(${header.id})"/>
+            </delete>
+        </rest>
     </camelContext>
 </blueprint>

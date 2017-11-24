@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 /**
- * @类描述： 企业招聘实体类
+ * @类描述： 学生应聘实体类
  * @创建人：
  * @创建时间：
  * @修改人：
@@ -19,7 +19,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "art_candidate")
-@ApiModel("招聘<br>CandidateBean")
+@ApiModel("应聘<br>CandidateBean")
 public class CandidateBean extends PersistentEntity {
     @ApiModelProperty("标题")
     private String title;   //标题
