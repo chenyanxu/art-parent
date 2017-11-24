@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>art-recruit-dao</artifactId>
-    <name>Kalix Art DAO</name>
+    <name>Kalix Art Recruit DAO</name>
     <description>Art JPA</description>
     <packaging>bundle</packaging>
 

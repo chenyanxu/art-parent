@@ -13,4 +13,27 @@
     <groupId>com.kalix.art.candidate</groupId>
     <name>Kalix Art Candidate Parent</name>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>art-candidate-entities</module>
+        <module>art-candidate-api</module>
+        <module>art-candidate-dao</module>
+        <module>art-candidate-biz</module>
+        <module>art-candidate-rest</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.kalix.art.candidate</groupId>
+                <artifactId>art-candidate-api</artifactId>
+                <version>${project.art.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.art.candidate</groupId>
+                <artifactId>art-candidate-entities</artifactId>
+                <version>${project.art.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 /**
- * @类描述：
+ * @类描述： 企业招聘实体类
  * @创建人：
  * @创建时间：
  * @修改人：
