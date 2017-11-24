@@ -4,11 +4,11 @@
            xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
 ">
     <tx:enable-annotations/>
-    <reference id="recruitBeanDao" interface="com.kalix.art.recruit.api.dao.IRecruitBeanDao"/>
-    <service id="recruitBeanService" interface="com.kalix.art.recruit.api.biz.IRecruitBeanService"
+    <reference id="candidateBeanDao" interface="com.kalix.art.candidate.api.dao.ICandidateBeanDao"/>
+    <service id="candidateBeanService" interface="com.kalix.art.candidate.api.biz.ICandidateBeanService"
              ref="beanServiceImpl"/>
-    <bean id="beanServiceImpl" class="com.kalix.art.recruit.biz.CandidateBeanServiceImpl">
-        <property name="dao" ref="recruitBeanDao"/>
+    <bean id="beanServiceImpl" class="com.kalix.art.candidate.biz.CandidateBeanServiceImpl">
+        <property name="dao" ref="candidateBeanDao"/>
     </bean>
 </blueprint>
 

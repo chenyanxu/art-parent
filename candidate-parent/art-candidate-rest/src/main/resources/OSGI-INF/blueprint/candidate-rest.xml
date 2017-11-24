@@ -3,12 +3,12 @@
            xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
            xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
        http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
-    <reference id="recruitService" interface="com.kalix.art.recruit.api.biz.IRecruitBeanService"/>
+    <reference id="candidateService" interface="com.kalix.art.candidate.api.biz.ICandidateBeanService"/>
 
-    <bean id="candidateRoute" class="com.kalix.framework.core.impl.camel.BaseRouteBuilder">
-        <property name="beanName" value="com.kalix.art.candidate.entities.RecruitBean"/>
+    <bean id="mycandidateRoute" class="com.kalix.framework.core.impl.camel.BaseRouteBuilder">
+        <property name="beanName" value="com.kalix.art.candidate.entities.CandidateBean"/>
     </bean>
-    <camelContext id="candidateCamel" xmlns="http://camel.apache.org/schema/blueprint">
-        <routeBuilder ref="candidateRoute"/>
+    <camelContext id="mycandidateCamel" xmlns="http://camel.apache.org/schema/blueprint">
+        <routeBuilder ref="mycandidateRoute"/>
     </camelContext>
 </blueprint>

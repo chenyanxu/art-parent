@@ -7,10 +7,10 @@
     <jpa:enable/>
     <tx:enable-annotations/>
 
-    <bean id="recruitBeanDaoImpl" class="com.kalix.art.recruit.dao.RecruitBeanDaoImpl">
+    <bean id="candidateBeanDaoImpl" class="com.kalix.art.candidate.dao.CandidateBeanDaoImpl">
         <tx:transaction method="*" value="Required"/>
     </bean>
 
-    <service interface="com.kalix.art.recruit.api.dao.IRecruitBeanDao" ref="recruitBeanDaoImpl"/>
+    <service interface="com.kalix.art.candidate.api.dao.ICandidateBeanDao" ref="candidateBeanDaoImpl"/>
 </blueprint>
 
