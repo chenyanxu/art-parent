@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>recruit-parent</artifactId>
+        <groupId>com.kalix.art.recruit</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>art-recruit-dao</artifactId>
+    <name>Kalix Art DAO</name>
+    <description>Art JPA</description>
+    <packaging>bundle</packaging>
+
+
+    <properties>
+        <bundle.symbolicName>com.kalix.art.recruit.dao</bundle.symbolicName>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kalix.art.recruit</groupId>
+            <artifactId>art-recruit-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kalix.framework.core</groupId>
+            <artifactId>framework-core-impl</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+
+        </plugins>
+    </build>
+</project>

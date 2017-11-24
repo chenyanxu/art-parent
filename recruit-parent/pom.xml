@@ -13,4 +13,27 @@
     <groupId>com.kalix.art.recruit</groupId>
     <name>Kalix Art Recruit Parent</name>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>art-recruit-entities</module>
+        <module>art-recruit-api</module>
+        <module>art-recruit-dao</module>
+        <module>art-recruit-biz</module>
+        <module>art-recruit-rest</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.kalix.art.recruit</groupId>
+                <artifactId>art-recruit-api</artifactId>
+                <version>${project.art.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.art.recruit</groupId>
+                <artifactId>art-recruit-entities</artifactId>
+                <version>${project.art.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
