@@ -1,0 +1,12 @@
+#-----------------------------------------------------------------
+# Use this file to add customized Bnd instructions for the bundle
+#-----------------------------------------------------------------
+
+Bundle-Activator: ${bundle.namespace}.internal.InitActivator
+
+Include-Resource: target/classes
+Bundle-Category: Kalix Art Candidate
+Import-Package:com.kalix.framework.core.api.persistence,\
+               com.kalix.framework.core.api.biz,\
+               com.kalix.art.candidate.entities,\
+               org.osgi.service.cm,*
