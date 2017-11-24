@@ -10,8 +10,31 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kalix.art.system.dict</groupId>
-    <artifactId>art-parent</artifactId>
+    <artifactId>dict-parent</artifactId>
     <name>Kalix Art System Dict</name>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>art-system-dict-entities</module>
+        <module>art-system-dict-api</module>
+        <module>art-system-dict-dao</module>
+        <module>art-system-dict-biz</module>
+        <module>art-system-dict-rest</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.kalix.art.system.dict</groupId>
+                <artifactId>art-system-dict-entities</artifactId>
+                <version>${project.art.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.art.system.dict</groupId>
+                <artifactId>art-system-dict-api</artifactId>
+                <version>${project.art.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
