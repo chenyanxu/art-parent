@@ -5,6 +5,7 @@ import com.kalix.framework.core.api.persistence.PersistentEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
@@ -21,41 +22,108 @@ import java.util.Date;
 @Table(name = "art_recruit")
 @ApiModel("招聘<br>RecruitBean")
 public class RecruitBean extends PersistentEntity {
-    @ApiModelProperty("标题")
-    private String title;   //标题
-    @ApiModelProperty("内容")
-    private String content; //内容
-    @ApiModelProperty(hidden = true)
-    private String publishPeople;//发布人
+    @ApiModelProperty("企业组织机构代码")
+    private String companyCode;       //企业组织机构代码
+    @ApiModelProperty("企业名称")
+    private String companyName;       //企业名称
+    @ApiModelProperty("企业性质")
+    private Integer companyNature;    //企业性质，字典
+    @ApiModelProperty("企业规模")
+    private String companyScale;      //企业规模
+    @ApiModelProperty("企业行业")
+    private Integer companyIndustry;  //企业行业，字典
+    @ApiModelProperty("企业年限")
+    private String companyLife;       //企业年限
+    @ApiModelProperty("地区")
+    private String region;            //地区
+    @ApiModelProperty("城市")
+    private String city;              //城市
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @ApiModelProperty(hidden = true)
-    private Date publishDate;//发布时间
+    private Date publishDate;         //发布时间
+    @ApiModelProperty("职位描述")
+    private String position;          //职位描述
+    @ApiModelProperty("岗位要求")
+    private String positionRequires;  //岗位要求
+    @ApiModelProperty("岗位个数")
+    private Integer jobNumbers;       //岗位个数
+    @ApiModelProperty("学历")
+    private String education;         //学历
+    @ApiModelProperty("职能类别")
+    private Long functionCategoryId;  //职能类别，对象字典
+    @ApiModelProperty("薪资")
+    private Integer salary;           //薪资
+    @ApiModelProperty("应用技术名称")
+    private String appliedTechnology; //应用技术名称
+    @ApiModelProperty("个人要求")
+    private String personRequires;    //个人要求
+    @ApiModelProperty("工作类型")
+    private Integer jobType;          //工作类型
 
-    public String getTitle() {
-        return title;
+    public String getCompanyCode() {
+        return companyCode;
     }
 
-    public void setTitle(String text) {
-        this.title = text;
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
 
-    public String getContent() {
-        return content;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
-    public String getPublishPeople() {
-        return publishPeople;
+    public Integer getCompanyNature() {
+        return companyNature;
     }
 
-    public void setPublishPeople(String publishPeople) {
-        this.publishPeople = publishPeople;
+    public void setCompanyNature(Integer companyNature) {
+        this.companyNature = companyNature;
     }
 
-    @ApiModelProperty(hidden = true)
+    public String getCompanyScale() {
+        return companyScale;
+    }
+
+    public void setCompanyScale(String companyScale) {
+        this.companyScale = companyScale;
+    }
+
+    public Integer getCompanyIndustry() {
+        return companyIndustry;
+    }
+
+    public void setCompanyIndustry(Integer companyIndustry) {
+        this.companyIndustry = companyIndustry;
+    }
+
+    public String getCompanyLife() {
+        return companyLife;
+    }
+
+    public void setCompanyLife(String companyLife) {
+        this.companyLife = companyLife;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     public Date getPublishDate() {
         return publishDate;
     }
@@ -64,13 +132,75 @@ public class RecruitBean extends PersistentEntity {
         this.publishDate = publishDate;
     }
 
-    @Override
-    public String toString() {
-        return "RecruitBean{" +
-                "content='" + content + '\'' +
-                ", title='" + title + '\'' +
-                ", publishPeople='" + publishPeople + '\'' +
-                ", publishDate=" + publishDate +
-                '}';
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public String getPositionRequires() {
+        return positionRequires;
+    }
+
+    public void setPositionRequires(String positionRequires) {
+        this.positionRequires = positionRequires;
+    }
+
+    public Integer getJobNumbers() {
+        return jobNumbers;
+    }
+
+    public void setJobNumbers(Integer jobNumbers) {
+        this.jobNumbers = jobNumbers;
+    }
+
+    public String getEducation() {
+        return education;
+    }
+
+    public void setEducation(String education) {
+        this.education = education;
+    }
+
+    public Long getFunctionCategoryId() {
+        return functionCategoryId;
+    }
+
+    public void setFunctionCategoryId(Long functionCategoryId) {
+        this.functionCategoryId = functionCategoryId;
+    }
+
+    public Integer getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Integer salary) {
+        this.salary = salary;
+    }
+
+    public String getAppliedTechnology() {
+        return appliedTechnology;
+    }
+
+    public void setAppliedTechnology(String appliedTechnology) {
+        this.appliedTechnology = appliedTechnology;
+    }
+
+    public String getPersonRequires() {
+        return personRequires;
+    }
+
+    public void setPersonRequires(String personRequires) {
+        this.personRequires = personRequires;
+    }
+
+    public Integer getJobType() {
+        return jobType;
+    }
+
+    public void setJobType(Integer jobType) {
+        this.jobType = jobType;
     }
 }

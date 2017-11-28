@@ -7,6 +7,10 @@
 
     <bean id="recruitRoute" class="com.kalix.framework.core.impl.camel.BaseRouteBuilder">
         <property name="beanName" value="com.kalix.art.recruit.entities.RecruitBean"/>
+        <property name="rests">
+            <list>
+            </list>
+        </property>
     </bean>
     <camelContext id="recruitCamel" xmlns="http://camel.apache.org/schema/blueprint">
         <routeBuilder ref="recruitRoute"/>
