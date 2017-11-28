@@ -19,7 +19,7 @@ import java.util.Date;
  * @修改备注：
  */
 public class CandidateBeanServiceImpl extends ShiroGenericBizServiceImpl<ICandidateBeanDao, CandidateBean> implements ICandidateBeanService {
-    @Override
+    /*@Override
     public void beforeSaveEntity(CandidateBean entity, JsonStatus status) {
         String userName = shiroService.getCurrentUserRealName();
         Assert.notNull(userName, "用户名不能为空.");
@@ -27,5 +27,5 @@ public class CandidateBeanServiceImpl extends ShiroGenericBizServiceImpl<ICandid
             entity.setPublishPeople(userName);
             entity.setPublishDate(new Date());
         }
-    }
+    }*/
 }
