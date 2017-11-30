@@ -5,10 +5,20 @@
 ">
     <tx:enable-annotations/>
     <reference id="candidateBeanDao" interface="com.kalix.art.candidate.api.dao.ICandidateBeanDao"/>
-    <service id="candidateBeanService" interface="com.kalix.art.candidate.api.biz.ICandidateBeanService"
-             ref="beanServiceImpl"/>
-    <bean id="beanServiceImpl" class="com.kalix.art.candidate.biz.CandidateBeanServiceImpl">
+    <reference id="majorCourseBeanDao" interface="com.kalix.art.candidate.api.dao.IMajorCourseBeanDao"/>
+    <reference id="orgBeanDao" interface="com.kalix.admin.core.api.dao.IOrganizationBeanDao"/>
+
+    <bean id="candidateBeanServiceImpl" class="com.kalix.art.candidate.biz.CandidateBeanServiceImpl">
         <property name="dao" ref="candidateBeanDao"/>
     </bean>
+    <service id="candidateBeanService" interface="com.kalix.art.candidate.api.biz.ICandidateBeanService"
+             ref="candidateBeanServiceImpl"/>
+
+    <bean id="majorCourseBeanServiceImpl" class="com.kalix.art.candidate.biz.MajorCourseBeanServiceImpl">
+        <property name="dao" ref="majorCourseBeanDao"/>
+        <property name="orgDao" ref="orgBeanDao"/>
+    </bean>
+    <service id="majorCourseBeanService" interface="com.kalix.art.candidate.api.biz.IMajorCourseBeanService"
+             ref="majorCourseBeanServiceImpl"/>
 </blueprint>
 
