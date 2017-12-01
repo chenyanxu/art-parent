@@ -5,10 +5,18 @@
 ">
     <tx:enable-annotations/>
     <reference id="recruitBeanDao" interface="com.kalix.art.recruit.api.dao.IRecruitBeanDao"/>
-    <service id="recruitBeanService" interface="com.kalix.art.recruit.api.biz.IRecruitBeanService"
-             ref="beanServiceImpl"/>
-    <bean id="beanServiceImpl" class="com.kalix.art.recruit.biz.RecruitBeanServiceImpl">
+    <reference id="functionCategoryBeanDao" interface="com.kalix.art.recruit.api.dao.IFunctionCategoryBeanDao"/>
+
+    <bean id="recruitBeanServiceImpl" class="com.kalix.art.recruit.biz.RecruitBeanServiceImpl">
         <property name="dao" ref="recruitBeanDao"/>
     </bean>
+    <service id="recruitBeanService" interface="com.kalix.art.recruit.api.biz.IRecruitBeanService"
+             ref="recruitBeanServiceImpl"/>
+
+    <bean id="functionCategoryBeanServiceImpl" class="com.kalix.art.recruit.biz.FunctionCategoryBeanServiceImpl">
+        <property name="dao" ref="functionCategoryBeanDao"/>
+    </bean>
+    <service id="functionCategoryBeanService" interface="com.kalix.art.recruit.api.biz.IFunctionCategoryBeanService"
+             ref="functionCategoryBeanServiceImpl"/>
 </blueprint>
 

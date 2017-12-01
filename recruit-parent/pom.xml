@@ -20,6 +20,7 @@
         <module>art-recruit-dao</module>
         <module>art-recruit-biz</module>
         <module>art-recruit-rest</module>
+        <module>art-recruit-dto</module>
     </modules>
 
     <dependencyManagement>

@@ -23,5 +23,10 @@
             <groupId>com.kalix.art.recruit</groupId>
             <artifactId>art-recruit-entities</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.kalix.art.recruit</groupId>
+            <artifactId>art-recruit-dto</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

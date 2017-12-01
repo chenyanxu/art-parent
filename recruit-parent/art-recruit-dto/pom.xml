@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-    <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <artifactId>recruit-parent</artifactId>
         <groupId>com.kalix.art.recruit</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>art-recruit-rest</artifactId>
-    <name>Kalix Art Recruit Rest</name>
-    <description>Art Rest Service</description>
+    <artifactId>art-recruit-dto</artifactId>
+    <name>Kalix Art Recruit DTO</name>
     <packaging>bundle</packaging>
 
-
     <properties>
-        <bundle.symbolicName>com.kalix.art.recruit.rest</bundle.symbolicName>
+        <bundle.symbolicName>com.kalix.art.recruit.dto</bundle.symbolicName>
     </properties>
+
 </project>

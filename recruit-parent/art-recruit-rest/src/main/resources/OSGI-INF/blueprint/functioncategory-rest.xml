@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+       http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+    <reference id="functioncategoryService" interface="com.kalix.art.recruit.api.biz.IFunctionCategoryBeanService"/>
+
+    <bean id="functionCategoryRoute" class="com.kalix.framework.core.impl.camel.BaseRouteBuilder">
+        <property name="beanName" value="com.kalix.art.recruit.entities.FunctionCategoryBean"/>
+        <property name="rests">
+            <list>
+                <bean class="com.kalix.framework.core.api.camel.CustomRest">
+                    <property name="path" value="/functioncategorys"/>
+                    <property name="getDescription" value="查询全部职能类别(树状结构)"/>
+                    <property name="getOutType" value="com.kalix.art.recruit.dto.model.FunctionCategoryDTO"/>
+                    <property name="getToUri" value="bean:functioncategoryService?method=getAllFunctionCategory()"/>
+                </bean>
+                <bean class="com.kalix.framework.core.api.camel.CustomRest">
+                    <property name="path" value="/functioncategorys/{id}"/>
+                    <property name="getDescription" value="查询指定id下的全部职能类别(树状结构)"/>
+                    <property name="getOutType" value="com.kalix.art.recruit.dto.model.FunctionCategoryDTO"/>
+                    <property name="getToUri" value="bean:functioncategoryService?method=getFunctionCategoryDTO(${header.id})"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <camelContext id="functionCategoryCamel" xmlns="http://camel.apache.org/schema/blueprint">
+        <routeBuilder ref="functionCategoryRoute"/>
+    </camelContext>
+</blueprint>

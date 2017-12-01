@@ -10,7 +10,11 @@
     <bean id="recruitBeanDaoImpl" class="com.kalix.art.recruit.dao.RecruitBeanDaoImpl">
         <tx:transaction method="*" value="Required"/>
     </bean>
-
     <service interface="com.kalix.art.recruit.api.dao.IRecruitBeanDao" ref="recruitBeanDaoImpl"/>
+
+    <bean id="functionCategoryBeanDaoImpl" class="com.kalix.art.recruit.dao.FunctionCategoryBeanDaoImpl">
+        <tx:transaction method="*" value="Required"/>
+    </bean>
+    <service interface="com.kalix.art.recruit.api.dao.IFunctionCategoryBeanDao" ref="functionCategoryBeanDaoImpl"/>
 </blueprint>
 
