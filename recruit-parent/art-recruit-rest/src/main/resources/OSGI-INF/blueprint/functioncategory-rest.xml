@@ -12,14 +12,20 @@
                 <bean class="com.kalix.framework.core.api.camel.CustomRest">
                     <property name="path" value="/functioncategorys"/>
                     <property name="getDescription" value="查询全部职能类别(树状结构)"/>
-                    <property name="getOutType" value="com.kalix.art.recruit.dto.model.FunctionCategoryDTO"/>
-                    <property name="getToUri" value="bean:functioncategoryService?method=getAllFunctionCategory()"/>
+                    <property name="getOutType" value="com.kalix.framework.core.api.web.model.BaseTreeDTO"/>
+                    <property name="getToUri" value="bean:functioncategoryService?method=getAllTree()"/>
                 </bean>
                 <bean class="com.kalix.framework.core.api.camel.CustomRest">
                     <property name="path" value="/functioncategorys/{id}"/>
                     <property name="getDescription" value="查询指定id下的全部职能类别(树状结构)"/>
-                    <property name="getOutType" value="com.kalix.art.recruit.dto.model.FunctionCategoryDTO"/>
-                    <property name="getToUri" value="bean:functioncategoryService?method=getFunctionCategoryDTO(${header.id})"/>
+                    <property name="getOutType" value="com.kalix.framework.core.api.web.model.BaseTreeDTO"/>
+                    <property name="getToUri" value="bean:functioncategoryService?method=getTreeByNodeId(${header.id})"/>
+                </bean>
+                <bean class="com.kalix.framework.core.api.camel.CustomRest">
+                    <property name="path" value="/functioncategorys/{id}/parentpath"/>
+                    <property name="getDescription" value="查询指定id的父id路径"/>
+                    <property name="getOutType" value="java.lang.String"/>
+                    <property name="getToUri" value="bean:functioncategoryService?method=getParentIdPath(${header.id})"/>
                 </bean>
             </list>
         </property>

@@ -8,6 +8,6 @@ Include-Resource: target/classes
 Bundle-Category: Kalix Art Recruit
 Import-Package:com.kalix.framework.core.api.persistence,\
                com.kalix.framework.core.api.biz,\
+               com.kalix.framework.core.api.web.model,\
                com.kalix.art.recruit.entities,\
-               com.kalix.art.recruit.dto.model,\
                org.osgi.service.cm,*
