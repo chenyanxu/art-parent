@@ -2,6 +2,7 @@ package com.kalix.art.recruit.api.biz;
 
 import com.kalix.art.recruit.entities.CompanyBean;
 import com.kalix.framework.core.api.biz.IBizService;
+import com.kalix.framework.core.api.persistence.JsonData;
 
 /**
  * @类描述：应用服务接口.

@@ -3,6 +3,7 @@ package com.kalix.art.recruit.biz;
 import com.kalix.art.recruit.api.biz.ICompanyBeanService;
 import com.kalix.art.recruit.api.dao.ICompanyBeanDao;
 import com.kalix.art.recruit.entities.CompanyBean;
+import com.kalix.framework.core.api.persistence.JsonData;
 import com.kalix.framework.core.impl.biz.ShiroGenericBizServiceImpl;
 
 /**
@@ -14,12 +15,9 @@ import com.kalix.framework.core.impl.biz.ShiroGenericBizServiceImpl;
  * @修改备注：
  */
 public class CompanyBeanServiceImpl extends ShiroGenericBizServiceImpl<ICompanyBeanDao, CompanyBean> implements ICompanyBeanService {
-    /*@Override
-    public void beforeSaveEntity(RecruitBean entity, JsonStatus status) {
-        String userName = shiroService.getCurrentUserRealName();
-        Assert.notNull(userName, "用户名不能为空.");
-        if (StringUtils.isNotEmpty(userName)) {
-            entity.setPublishDate(new Date());
-        }
-    }*/
+
+    @Override
+    public JsonData getAllEntityByQuery(Integer page, Integer limit, String jsonStr, String sort) {
+        return dao.getAllRelations(page, limit, jsonStr, sort);
+    }
 }

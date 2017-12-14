@@ -20,10 +20,10 @@
     <service id="functionCategoryBeanService" interface="com.kalix.art.recruit.api.biz.IFunctionCategoryBeanService"
              ref="functionCategoryBeanServiceImpl"/>
 
-    <bean id="ompanyBeanServiceImpl" class="com.kalix.art.recruit.biz.CompanyBeanServiceImpl">
-        <property name="dao" ref="functionCategoryBeanDao"/>
+    <bean id="companyBeanServiceImpl" class="com.kalix.art.recruit.biz.CompanyBeanServiceImpl">
+        <property name="dao" ref="companyBeanDao"/>
     </bean>
-    <service id="ompanyBeanService" interface="com.kalix.art.recruit.api.biz.ICompanyBeanService"
-             ref="ompanyBeanServiceImpl"/>
+    <service id="companyBeanService" interface="com.kalix.art.recruit.api.biz.ICompanyBeanService"
+             ref="companyBeanServiceImpl"/>
 </blueprint>
 

@@ -1,10 +1,6 @@
 package com.kalix.art.recruit.dto.model;
 
-import com.kalix.framework.core.api.web.model.BaseDTO;
 import com.kalix.framework.core.api.web.model.BaseTreeDTO;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 职能类别模型类

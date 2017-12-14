@@ -1,53 +1,25 @@
-package com.kalix.art.recruit.entities;
+package com.kalix.art.recruit.dto.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.kalix.framework.core.api.persistence.PersistentEntity;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Transient;
-import java.util.Date;
+import com.kalix.framework.core.api.web.model.BaseDTO;
 
 /**
- * @类描述： 企业实体类
- * @创建人：
- * @创建时间：
- * @修改人：
- * @修改时间：
- * @修改备注：
+ * 企业信息模型类
+ * @author hqj date:2017-12-13
+ * @version 1.0.0
  */
-@Entity
-@Table(name = "art_company")
-@ApiModel("企业<br>CompanyBean")
-public class CompanyBean extends PersistentEntity {
-    @ApiModelProperty("用户id")
+public class CompanyDTO extends BaseDTO {
     private Long userId;           //与用户关联id
-    @Transient
     private String code;      //企业组织机构代码
-    @Transient
     private String name;      //企业名称
-    @Transient
     private String email;     //邮箱
-    @Transient
     private String phone;     //固定电话
-    @Transient
     private String mobile;    //手机
-    @ApiModelProperty("企业性质")
     private Integer nature;        //企业性质，字典
-    @ApiModelProperty("企业规模")
     private String scale;          //企业规模
-    @ApiModelProperty("企业行业")
     private Integer industry;      //企业行业，字典
-    @ApiModelProperty("企业年限")
     private String life;           //企业年限
-    @ApiModelProperty("地区")
     private String region;         //地区
-    @ApiModelProperty("城市")
     private String city;           //城市
-    @ApiModelProperty("企业详细地址")
     private String address;        //企业详细地址
 
     public Long getUserId() {
