@@ -21,6 +21,7 @@ public class CompanyDTO extends BaseDTO {
     private String region;         //地区
     private String city;           //城市
     private String address;        //企业详细地址
+    private Long version_;         //版本控制
 
     public Long getUserId() {
         return userId;
@@ -124,5 +125,13 @@ public class CompanyDTO extends BaseDTO {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Long getVersion_() {
+        return version_;
+    }
+
+    public void setVersion_(Long version_) {
+        this.version_ = version_;
     }
 }

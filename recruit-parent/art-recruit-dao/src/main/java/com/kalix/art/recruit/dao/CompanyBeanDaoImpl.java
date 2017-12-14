@@ -32,7 +32,7 @@ public class CompanyBeanDaoImpl extends GenericDao<CompanyBean, Long> implements
         JsonData jsonData = new JsonData();
         String sql = "select t.* from " +
                 " (select b.id, a.id as userId, a.code, a.name, a.email, a.phone, a.mobile, " +
-                " b.nature, b.scale, b.industry, b.life, b.region, b.city, b.address " +
+                " b.nature, b.scale, b.industry, b.life, b.region, b.city, b.address, b.version_ " +
                 " from sys_user a left join " + super.getTableName() + " b on a.id = b.userid " +
                 " where a.usertype = 3) t";
         sql += CommonMethod.createWhereCondition(jsonStr, sort);
