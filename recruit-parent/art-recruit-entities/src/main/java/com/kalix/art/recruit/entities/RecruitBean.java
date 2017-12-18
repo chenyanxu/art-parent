@@ -26,6 +26,12 @@ public class RecruitBean extends PersistentEntity {
     private String companyCode;       //企业组织机构代码
     @ApiModelProperty("企业名称")
     private String companyName;       //企业名称
+    @ApiModelProperty("邮箱")
+    private String companyEmail;      //邮箱
+    @ApiModelProperty("固定电话")
+    private String companyPhone;      //固定电话
+    @ApiModelProperty("手机")
+    private String companyMobile;     //手机
     @ApiModelProperty("企业性质")
     private Integer companyNature;    //企业性质，字典
     @ApiModelProperty("企业规模")
@@ -34,13 +40,19 @@ public class RecruitBean extends PersistentEntity {
     private Integer companyIndustry;  //企业行业，字典
     @ApiModelProperty("企业年限")
     private String companyLife;       //企业年限
-    @ApiModelProperty("地区")
-    private String region;            //地区
-    @ApiModelProperty("城市")
-    private String city;              //城市
+    @ApiModelProperty("企业所在地区")
+    private String companyRegion;     //地区
+    @ApiModelProperty("企业所在城市")
+    private String companyCity;       //城市
+    @ApiModelProperty("企业详细地址")
+    private String companyAddress;    //企业详细地址
+    @ApiModelProperty("发布时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    @ApiModelProperty(hidden = true)
     private Date publishDate;         //发布时间
+    @ApiModelProperty("工作地区")
+    private String region;            //工作地区
+    @ApiModelProperty("工作城市")
+    private String city;              //工作城市
     @ApiModelProperty("职位描述")
     private String position;          //职位描述
     @ApiModelProperty("岗位要求")
@@ -76,6 +88,30 @@ public class RecruitBean extends PersistentEntity {
         this.companyName = companyName;
     }
 
+    public String getCompanyEmail() {
+        return companyEmail;
+    }
+
+    public void setCompanyEmail(String companyEmail) {
+        this.companyEmail = companyEmail;
+    }
+
+    public String getCompanyPhone() {
+        return companyPhone;
+    }
+
+    public void setCompanyPhone(String companyPhone) {
+        this.companyPhone = companyPhone;
+    }
+
+    public String getCompanyMobile() {
+        return companyMobile;
+    }
+
+    public void setCompanyMobile(String companyMobile) {
+        this.companyMobile = companyMobile;
+    }
+
     public Integer getCompanyNature() {
         return companyNature;
     }
@@ -108,6 +144,38 @@ public class RecruitBean extends PersistentEntity {
         this.companyLife = companyLife;
     }
 
+    public String getCompanyRegion() {
+        return companyRegion;
+    }
+
+    public void setCompanyRegion(String companyRegion) {
+        this.companyRegion = companyRegion;
+    }
+
+    public String getCompanyCity() {
+        return companyCity;
+    }
+
+    public void setCompanyCity(String companyCity) {
+        this.companyCity = companyCity;
+    }
+
+    public String getCompanyAddress() {
+        return companyAddress;
+    }
+
+    public void setCompanyAddress(String companyAddress) {
+        this.companyAddress = companyAddress;
+    }
+
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public void setPublishDate(Date publishDate) {
+        this.publishDate = publishDate;
+    }
+
     public String getRegion() {
         return region;
     }
@@ -122,14 +190,6 @@ public class RecruitBean extends PersistentEntity {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public Date getPublishDate() {
-        return publishDate;
-    }
-
-    public void setPublishDate(Date publishDate) {
-        this.publishDate = publishDate;
     }
 
     public String getPosition() {
