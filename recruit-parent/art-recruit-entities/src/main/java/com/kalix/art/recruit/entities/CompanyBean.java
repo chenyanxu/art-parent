@@ -24,6 +24,7 @@ import java.util.Date;
 @ApiModel("企业<br>CompanyBean")
 public class CompanyBean extends PersistentEntity {
     @ApiModelProperty("用户id")
+    @Column(unique = true)
     private Long userId;           //与用户关联id
     @Transient
     private String code;      //企业组织机构代码
