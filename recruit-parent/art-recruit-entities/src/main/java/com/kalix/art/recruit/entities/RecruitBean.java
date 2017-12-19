@@ -68,7 +68,7 @@ public class RecruitBean extends PersistentEntity {
     @ApiModelProperty("应用技术名称")
     private String appliedTechnology; //应用技术名称
     @ApiModelProperty("个人要求")
-    private String personRequires;    //个人要求
+    private String personRequires;    //个人要求，字典【个人要求】多个
     @ApiModelProperty("工作类型")
     private Integer jobType;          //工作类型
 
