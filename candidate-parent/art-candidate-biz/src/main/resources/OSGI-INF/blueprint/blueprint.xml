@@ -7,6 +7,7 @@
     <reference id="candidateBeanDao" interface="com.kalix.art.candidate.api.dao.ICandidateBeanDao"/>
     <reference id="majorCourseBeanDao" interface="com.kalix.art.candidate.api.dao.IMajorCourseBeanDao"/>
     <reference id="orgBeanDao" interface="com.kalix.admin.core.api.dao.IOrganizationBeanDao"/>
+    <reference id="scoreBeanDao" interface="com.kalix.art.candidate.api.dao.IScoreBeanDao"/>
 
     <bean id="candidateBeanServiceImpl" class="com.kalix.art.candidate.biz.CandidateBeanServiceImpl">
         <property name="dao" ref="candidateBeanDao"/>
@@ -20,5 +21,11 @@
     </bean>
     <service id="majorCourseBeanService" interface="com.kalix.art.candidate.api.biz.IMajorCourseBeanService"
              ref="majorCourseBeanServiceImpl"/>
+
+    <bean id="scoreBeanServiceImpl" class="com.kalix.art.candidate.biz.ScoreBeanServiceImpl">
+        <property name="dao" ref="scoreBeanDao"/>
+    </bean>
+    <service id="scoreBeanService" interface="com.kalix.art.candidate.api.biz.IScoreBeanService"
+             ref="scoreBeanServiceImpl"/>
 </blueprint>
 

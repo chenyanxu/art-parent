@@ -1,11 +1,10 @@
 package com.kalix.art.candidate.dao;
 
-import com.kalix.art.candidate.api.biz.CommonMethod;
 import com.kalix.art.candidate.api.dao.IMajorCourseBeanDao;
 import com.kalix.art.candidate.entities.MajorCourseBean;
 import com.kalix.framework.core.api.persistence.JsonData;
+import com.kalix.framework.core.impl.dao.CommonMethod;
 import com.kalix.framework.core.impl.dao.GenericDao;
-import org.apache.commons.lang.StringUtils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

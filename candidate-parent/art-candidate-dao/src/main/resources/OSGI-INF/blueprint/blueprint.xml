@@ -15,7 +15,11 @@
     <bean id="majorCourseBeanDaoImpl" class="com.kalix.art.candidate.dao.MajorCourseBeanDaoImpl">
         <tx:transaction method="*" value="Required"/>
     </bean>
-
     <service interface="com.kalix.art.candidate.api.dao.IMajorCourseBeanDao" ref="majorCourseBeanDaoImpl"/>
+
+    <bean id="scoreBeanDaoImpl" class="com.kalix.art.candidate.dao.ScoreBeanDaoImpl">
+        <tx:transaction method="*" value="Required"/>
+    </bean>
+    <service interface="com.kalix.art.candidate.api.dao.IScoreBeanDao" ref="scoreBeanDaoImpl"/>
 </blueprint>
 
