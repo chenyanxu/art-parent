@@ -14,16 +14,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "art_score")
 public class ScoreBean extends PersistentEntity {
-    private String studentNo;     //学号
+    private Long studentId;       //学生id
     private Long majorCourseId;   //专业课程id
     private Double score;         //所学课程的分数
 
-    public String getStudentNo() {
-        return studentNo;
+    public Long getStudentId() {
+        return studentId;
     }
 
-    public void setStudentNo(String studentNo) {
-        this.studentNo = studentNo;
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
 
     public Long getMajorCourseId() {

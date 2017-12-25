@@ -29,6 +29,11 @@
             <groupId>com.kalix.framework.core</groupId>
             <artifactId>framework-core-impl</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.kalix.art.candidate</groupId>
+            <artifactId>art-candidate-dto</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

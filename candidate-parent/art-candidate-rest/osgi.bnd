@@ -9,4 +9,5 @@ Bundle-Category: Kalix Art Candidate
 Import-Package:com.kalix.framework.core.api.persistence,\
                com.kalix.framework.core.api.biz,\
                com.kalix.art.candidate.entities,\
+               com.kalix.art.candidate.dto.model,\
                org.osgi.service.cm,*

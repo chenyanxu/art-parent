@@ -20,6 +20,7 @@
         <module>art-candidate-dao</module>
         <module>art-candidate-biz</module>
         <module>art-candidate-rest</module>
+        <module>art-candidate-dto</module>
     </modules>
 
     <dependencyManagement>

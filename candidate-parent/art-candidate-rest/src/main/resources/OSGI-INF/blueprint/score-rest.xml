@@ -10,34 +10,6 @@
         <property name="beanName" value="com.kalix.art.candidate.entities.ScoreBean"/>
         <property name="rests">
             <list>
-                <!--<bean class="com.kalix.framework.core.api.camel.CustomRest">
-                    <property name="path" value="/orgs/{orgId}/majorcourses"/>
-
-                    <property name="getDescription" value="查询指定组织机构（学院专业）id下的全部专业课程"/>
-                    <property name="getOutType" value="com.kalix.framework.core.api.persistence.JsonData"/>
-                    <property name="getToUri"
-                              value="bean:majorcourseService?method=getEntitiesByFK(${header.orgId},${header.page},${header.limit},${header.jsonStr},${header.sort})"/>
-
-                    <property name="postDescription" value="保存指定组织机构（学院专业）id的专业课程"/>
-                    <property name="inType" value="com.kalix.art.candidate.entities.MajorCourseBean"/>
-                    <property name="postOutType" value="com.kalix.framework.core.api.persistence.JsonStatus"/>
-                    <property name="postToUri"
-                              value="bean:majorcourseService?method=saveEntityByFK(${header.orgId},${body})"/>
-                </bean>
-                <bean class="com.kalix.framework.core.api.camel.CustomRest">
-                    <property name="path" value="/orgs/{orgId}/majorcourses/{id}"/>
-
-                    <property name="putDescription" value="修改指定组织机构（学院专业）id下的专业课程"/>
-                    <property name="inType" value="com.kalix.art.candidate.entities.MajorCourseBean"/>
-                    <property name="putOutType" value="com.kalix.framework.core.api.persistence.JsonStatus"/>
-                    <property name="putToUri"
-                              value="bean:majorcourseService?method=updateEntityByFK(${header.orgId},${body})"/>
-
-                    <property name="deleteDescription" value="删除指定组织机构（学院专业）id下的专业课程"/>
-                    <property name="deleteOutType" value="com.kalix.framework.core.api.persistence.JsonStatus"/>
-                    <property name="deleteToUri"
-                              value="bean:majorcourseService?method=deleteEntityByFK(${header.orgId},${header.id})"/>
-                </bean>-->
             </list>
         </property>
     </bean>

@@ -27,6 +27,7 @@
                 <bean class="com.kalix.framework.core.api.camel.CustomRest">
                     <property name="path" value="/orgs/{orgId}/majorcourses/{id}"/>
 
+
                     <property name="putDescription" value="修改指定组织机构（学院专业）id下的专业课程"/>
                     <property name="inType" value="com.kalix.art.candidate.entities.MajorCourseBean"/>
                     <property name="putOutType" value="com.kalix.framework.core.api.persistence.JsonStatus"/>
