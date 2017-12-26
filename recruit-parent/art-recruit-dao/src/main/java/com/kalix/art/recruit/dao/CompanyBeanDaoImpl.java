@@ -30,6 +30,7 @@ public class CompanyBeanDaoImpl extends GenericDao<CompanyBean, Long> implements
     @Override
     public JsonData getAllRelations(Integer page, Integer limit, String jsonStr, String sort) {
         JsonData jsonData = new JsonData();
+        // 通过用户表和企业表，关联查询企业信息（用户表左关联企业表，即用户注册即存在企业信息）
         String sql = "select t.* from " +
                 " (select b.id, a.id as userId, a.code, a.name, a.email, a.phone, a.mobile, " +
                 " b.nature, b.scale, b.industry, b.life, b.region, b.city, b.address, b.version_, b.creationDate, b.updateDate " +

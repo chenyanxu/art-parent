@@ -9,12 +9,6 @@
         <property name="beanName" value="com.kalix.art.recruit.entities.CompanyBean"/>
         <property name="rests">
             <list>
-                <!--<bean class="com.kalix.framework.core.api.camel.CustomRest">
-                    <property name="path" value="/companys"/>
-                    <property name="getDescription" value="查询全部公司信息"/>
-                    <property name="getOutType" value="com.kalix.framework.core.api.persistence.JsonData"/>
-                    <property name="getToUri" value="bean:companyService?method=getAllEntityByQuery(${header.page},${header.limit},${header.jsonStr},${header.sort})"/>
-                </bean>-->
             </list>
         </property>
     </bean>
