@@ -16,6 +16,7 @@ public class ScoreDTO extends BaseDTO {
     private Long majorCourseId;     //专业课程id
     private String majorCourseName; //专业课程名称
     private Double score;           //所学课程的分数
+    private Long version_;          //版本控制
 
     public Long getStudentId() {
         return studentId;
@@ -79,5 +80,13 @@ public class ScoreDTO extends BaseDTO {
 
     public void setScore(Double score) {
         this.score = score;
+    }
+
+    public Long getVersion_() {
+        return version_;
+    }
+
+    public void setVersion_(Long version_) {
+        this.version_ = version_;
     }
 }
