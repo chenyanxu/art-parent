@@ -14,5 +14,13 @@ import com.kalix.framework.core.api.persistence.JsonData;
  */
 public interface ICompanyBeanDao extends IGenericDao<CompanyBean, Long> {
     //在此添加新的DAO方法
+    /**
+     * 关联查询
+     * @param page
+     * @param limit
+     * @param jsonStr
+     * @param sort
+     * @return
+     */
     JsonData getAllRelations(Integer page, Integer limit, String jsonStr, String sort);
 }
