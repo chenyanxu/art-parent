@@ -40,23 +40,25 @@ public class RecruitBean extends PersistentEntity {
     private Integer companyIndustry;  //企业行业，字典
     @ApiModelProperty("企业年限")
     private String companyLife;       //企业年限
-    @ApiModelProperty("企业所在地区")
-    private String companyRegion;     //地区
+    @ApiModelProperty("企业所在省份")
+    private Integer companyRegion;    //省份（地区）,字典【省份】
     @ApiModelProperty("企业所在城市")
     private String companyCity;       //城市
     @ApiModelProperty("企业详细地址")
     private String companyAddress;    //企业详细地址
     @ApiModelProperty("发布时间")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date publishDate;         //发布时间
-    @ApiModelProperty("工作地区")
-    private String region;            //工作地区
+    @ApiModelProperty("工作省份")
+    private Integer region;           //工作省份（地区）
     @ApiModelProperty("工作城市")
     private String city;              //工作城市
-    @ApiModelProperty("职位描述")
-    private String position;          //职位描述
+    @ApiModelProperty("岗位名称")
+    private String position;          //岗位名称（职位描述）
     @ApiModelProperty("岗位要求")
     private String positionRequires;  //岗位要求
+    @ApiModelProperty("岗位所需软件")
+    private String requireSofts;      //岗位所需软件
     @ApiModelProperty("岗位个数")
     private Integer jobNumbers;       //岗位个数
     @ApiModelProperty("学历")
@@ -144,11 +146,11 @@ public class RecruitBean extends PersistentEntity {
         this.companyLife = companyLife;
     }
 
-    public String getCompanyRegion() {
+    public Integer getCompanyRegion() {
         return companyRegion;
     }
 
-    public void setCompanyRegion(String companyRegion) {
+    public void setCompanyRegion(Integer companyRegion) {
         this.companyRegion = companyRegion;
     }
 
@@ -176,11 +178,11 @@ public class RecruitBean extends PersistentEntity {
         this.publishDate = publishDate;
     }
 
-    public String getRegion() {
+    public Integer getRegion() {
         return region;
     }
 
-    public void setRegion(String region) {
+    public void setRegion(Integer region) {
         this.region = region;
     }
 
@@ -206,6 +208,14 @@ public class RecruitBean extends PersistentEntity {
 
     public void setPositionRequires(String positionRequires) {
         this.positionRequires = positionRequires;
+    }
+
+    public String getRequireSofts() {
+        return requireSofts;
+    }
+
+    public void setRequireSofts(String requireSofts) {
+        this.requireSofts = requireSofts;
     }
 
     public Integer getJobNumbers() {
