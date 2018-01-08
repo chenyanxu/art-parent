@@ -44,8 +44,8 @@ public class CompanyBean extends PersistentEntity {
     private Integer industry;      //企业行业，字典
     @ApiModelProperty("企业年限")
     private String life;           //企业年限
-    @ApiModelProperty("地区")
-    private String region;         //地区
+    @ApiModelProperty("省份")
+    private Integer region;        //省份（地区）
     @ApiModelProperty("城市")
     private String city;           //城市
     @ApiModelProperty("企业详细地址")
@@ -131,11 +131,11 @@ public class CompanyBean extends PersistentEntity {
         this.life = life;
     }
 
-    public String getRegion() {
+    public Integer getRegion() {
         return region;
     }
 
-    public void setRegion(String region) {
+    public void setRegion(Integer region) {
         this.region = region;
     }
 

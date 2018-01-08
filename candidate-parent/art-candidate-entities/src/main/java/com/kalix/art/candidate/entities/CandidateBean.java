@@ -26,10 +26,18 @@ public class CandidateBean extends PersistentEntity {
     private String code;                //学号
     @ApiModelProperty("姓名")
     private String name;                //姓名
-    @ApiModelProperty("工作地区")
-    private String region;              //工作地区
+    @ApiModelProperty("工作省份")
+    private Integer region;             //工作省份（地区）
     @ApiModelProperty("工作城市")
     private String city;                //工作城市
+    @ApiModelProperty("期望行业")
+    private Integer expectingIndustry;  //期望行业，字典【企业行业】
+    @ApiModelProperty("工作类型")
+    private Integer jobType;            //工作类型，字典【工作类型】
+    @ApiModelProperty("期望岗位")
+    private String position;            //期望岗位
+    @ApiModelProperty("所学软件")
+    private String learningSofts;       //所学软件
     @ApiModelProperty("学历")
     private String education;           //学历
     @ApiModelProperty("薪资")
@@ -38,8 +46,6 @@ public class CandidateBean extends PersistentEntity {
     private String skills;              //个人特点，字典【个人要求】多个
     @ApiModelProperty("职业规划、目标")
     private String careerGoal;          //职业规划、目标
-    @ApiModelProperty("期望行业")
-    private Integer expectingIndustry;  //期望行业，字典【企业行业】
 
     public String getCode() {
         return code;
@@ -57,11 +63,11 @@ public class CandidateBean extends PersistentEntity {
         this.name = name;
     }
 
-    public String getRegion() {
+    public Integer getRegion() {
         return region;
     }
 
-    public void setRegion(String region) {
+    public void setRegion(Integer region) {
         this.region = region;
     }
 
@@ -71,6 +77,38 @@ public class CandidateBean extends PersistentEntity {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public Integer getExpectingIndustry() {
+        return expectingIndustry;
+    }
+
+    public void setExpectingIndustry(Integer expectingIndustry) {
+        this.expectingIndustry = expectingIndustry;
+    }
+
+    public Integer getJobType() {
+        return jobType;
+    }
+
+    public void setJobType(Integer jobType) {
+        this.jobType = jobType;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public String getLearningSofts() {
+        return learningSofts;
+    }
+
+    public void setLearningSofts(String learningSofts) {
+        this.learningSofts = learningSofts;
     }
 
     public String getEducation() {
@@ -103,13 +141,5 @@ public class CandidateBean extends PersistentEntity {
 
     public void setCareerGoal(String careerGoal) {
         this.careerGoal = careerGoal;
-    }
-
-    public Integer getExpectingIndustry() {
-        return expectingIndustry;
-    }
-
-    public void setExpectingIndustry(Integer expectingIndustry) {
-        this.expectingIndustry = expectingIndustry;
     }
 }

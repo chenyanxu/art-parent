@@ -18,7 +18,7 @@ public class CompanyDTO extends BaseDTO {
     private String scale;          //企业规模
     private Integer industry;      //企业行业，字典
     private String life;           //企业年限
-    private String region;         //地区
+    private Integer region;        //省份（地区）
     private String city;           //城市
     private String address;        //企业详细地址
     private Long version_;         //版本控制
@@ -103,11 +103,11 @@ public class CompanyDTO extends BaseDTO {
         this.life = life;
     }
 
-    public String getRegion() {
+    public Integer getRegion() {
         return region;
     }
 
-    public void setRegion(String region) {
+    public void setRegion(Integer region) {
         this.region = region;
     }
 
