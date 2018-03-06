@@ -65,7 +65,9 @@ public class RecruitBean extends PersistentEntity {
     private String education;         //学历
     @ApiModelProperty("职能类别")
     private Long functionCategoryId;  //职能类别，对象字典
-    @ApiModelProperty("薪资")
+    @ApiModelProperty("试用期薪资")
+    private Integer probationSalary;
+    @ApiModelProperty("转正薪资")
     private Integer salary;           //薪资
     @ApiModelProperty("应用技术名称")
     private String appliedTechnology; //应用技术名称
@@ -240,6 +242,14 @@ public class RecruitBean extends PersistentEntity {
 
     public void setFunctionCategoryId(Long functionCategoryId) {
         this.functionCategoryId = functionCategoryId;
+    }
+
+    public Integer getProbationSalary() {
+        return probationSalary;
+    }
+
+    public void setProbationSalary(Integer probationSalary) {
+        this.probationSalary = probationSalary;
     }
 
     public Integer getSalary() {
