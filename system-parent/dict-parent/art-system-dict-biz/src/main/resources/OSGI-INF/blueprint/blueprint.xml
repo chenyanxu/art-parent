@@ -17,4 +17,24 @@
     <service id="artDictBeanService" interface="com.kalix.art.system.dict.api.biz.IArtDictBeanService"
              ref="artDictBeanServiceImpl">
     </service>
+
+    <bean id="companyDefaultRoleImpl" class="com.kalix.art.system.dict.biz.CompanyDefaultRoleImpl">
+    </bean>
+    <service id="companyDefaultRoleService" interface="com.kalix.framework.core.api.extend.IUserDefaultRole"
+             ref="companyDefaultRoleImpl">
+        <service-properties>
+            <!--招聘企业,用户类型,3-->
+            <entry key="userType" value="3"/>
+        </service-properties>
+    </service>
+
+    <bean id="studentDefaultRoleImpl" class="com.kalix.art.system.dict.biz.StudentDefaultRoleImpl">
+    </bean>
+    <service id="studentDefaultRoleService" interface="com.kalix.framework.core.api.extend.IUserDefaultRole"
+             ref="studentDefaultRoleImpl">
+        <service-properties>
+            <!--学生,用户类型,1-->
+            <entry key="userType" value="1"/>
+        </service-properties>
+    </service>
 </blueprint>
