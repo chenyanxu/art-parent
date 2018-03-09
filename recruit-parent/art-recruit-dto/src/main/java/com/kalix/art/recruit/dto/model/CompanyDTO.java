@@ -22,6 +22,7 @@ public class CompanyDTO extends BaseDTO {
     private String city;           //城市
     private String address;        //企业详细地址
     private Long version_;         //版本控制
+    private Long createById;       //创建者id
 
     public Long getUserId() {
         return userId;
@@ -133,5 +134,13 @@ public class CompanyDTO extends BaseDTO {
 
     public void setVersion_(Long version_) {
         this.version_ = version_;
+    }
+
+    public Long getCreateById() {
+        return createById;
+    }
+
+    public void setCreateById(Long createById) {
+        this.createById = createById;
     }
 }
