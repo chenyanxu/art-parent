@@ -62,13 +62,13 @@ public class RecruitBean extends PersistentEntity {
     @ApiModelProperty("岗位个数")
     private Integer jobNumbers;       //岗位个数
     @ApiModelProperty("学历")
-    private String education;         //学历
+    private Integer education;        //学历,字典【学历】
     @ApiModelProperty("职能类别")
     private Long functionCategoryId;  //职能类别，对象字典
-    @ApiModelProperty("试用期薪资")
-    private Integer probationSalary;
+    @ApiModelProperty("实习薪资")
+    private Integer probationSalary;  //实习薪资,字典【月薪】
     @ApiModelProperty("转正薪资")
-    private Integer salary;           //薪资
+    private Integer salary;           //转正薪资,字典【月薪】
     @ApiModelProperty("应用技术名称")
     private String appliedTechnology; //应用技术名称
     @ApiModelProperty("个人要求")
@@ -228,11 +228,11 @@ public class RecruitBean extends PersistentEntity {
         this.jobNumbers = jobNumbers;
     }
 
-    public String getEducation() {
+    public Integer getEducation() {
         return education;
     }
 
-    public void setEducation(String education) {
+    public void setEducation(Integer education) {
         this.education = education;
     }
 
