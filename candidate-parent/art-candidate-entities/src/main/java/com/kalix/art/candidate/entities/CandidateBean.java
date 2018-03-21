@@ -39,7 +39,7 @@ public class CandidateBean extends PersistentEntity {
     @ApiModelProperty("所学软件")
     private String learningSofts;       //所学软件
     @ApiModelProperty("学历")
-    private String education;           //学历
+    private Integer education;           //学历，字典【学历】
     @ApiModelProperty("薪资")
     private Integer salary;             //薪资
     @ApiModelProperty("个人特点")
@@ -111,11 +111,11 @@ public class CandidateBean extends PersistentEntity {
         this.learningSofts = learningSofts;
     }
 
-    public String getEducation() {
+    public Integer getEducation() {
         return education;
     }
 
-    public void setEducation(String education) {
+    public void setEducation(Integer education) {
         this.education = education;
     }
 
