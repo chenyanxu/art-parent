@@ -41,7 +41,7 @@ public class CandidateBean extends PersistentEntity {
     @ApiModelProperty("学历")
     private Integer education;           //学历，字典【学历】
     @ApiModelProperty("薪资")
-    private Integer salary;             //薪资
+    private Integer salary;             //薪资，字典【月薪】
     @ApiModelProperty("个人特点")
     private String skills;              //个人特点，字典【个人要求】多个
     @ApiModelProperty("职业规划、目标")
