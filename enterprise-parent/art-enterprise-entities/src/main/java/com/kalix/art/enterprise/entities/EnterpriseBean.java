@@ -4,6 +4,7 @@ import com.kalix.framework.core.api.persistence.PersistentEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -14,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "art_enterprise")
 @ApiModel("企业<br>EnterpriseBean")
 public class EnterpriseBean extends PersistentEntity {
-    // @Column(unique = true)
+    @Column(unique = true)
     private String code;        // 企业组织机构代码
     private String name;        // 企业名称
     private String email;       // 邮箱

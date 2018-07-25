@@ -5,7 +5,6 @@ import com.kalix.framework.core.api.persistence.PersistentEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
@@ -22,35 +21,36 @@ import java.util.Date;
 @Table(name = "art_recruit")
 @ApiModel("招聘<br>RecruitBean")
 public class RecruitBean extends PersistentEntity {
+    private Long enterpriseId;           //企业id
     @ApiModelProperty("企业组织机构代码")
-    private String companyCode;       //企业组织机构代码
+    private String enterpriseCode;       //企业组织机构代码
     @ApiModelProperty("企业名称")
-    private String companyName;       //企业名称
+    private String enterpriseName;       //企业名称
     @ApiModelProperty("邮箱")
-    private String companyEmail;      //邮箱
+    private String enterpriseEmail;      //邮箱
     @ApiModelProperty("固定电话")
-    private String companyPhone;      //固定电话
+    private String enterprisePhone;      //固定电话
     @ApiModelProperty("手机")
-    private String companyMobile;     //手机
+    private String enterpriseMobile;     //手机
     @ApiModelProperty("企业性质")
-    private Integer companyNature;    //企业性质，字典
+    private Integer enterpriseNature;    //企业性质，字典[企业性质]
     @ApiModelProperty("企业规模")
-    private String companyScale;      //企业规模
+    private String enterpriseScale;      //企业规模
     @ApiModelProperty("企业行业")
-    private Integer companyIndustry;  //企业行业，字典
+    private Integer enterpriseIndustry;  //企业行业，字典[企业行业]
     @ApiModelProperty("企业年限")
-    private String companyLife;       //企业年限
+    private String enterpriseLife;       //企业年限
     @ApiModelProperty("企业所在省份")
-    private Integer companyRegion;    //省份（地区）,字典【省份】
+    private Integer enterpriseRegion;    //省份（地区），字典[省份]
     @ApiModelProperty("企业所在城市")
-    private String companyCity;       //城市
+    private String enterpriseCity;       //城市
     @ApiModelProperty("企业详细地址")
-    private String companyAddress;    //企业详细地址
+    private String enterpriseAddress;    //企业详细地址
     @ApiModelProperty("发布时间")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date publishDate;         //发布时间
     @ApiModelProperty("工作省份")
-    private Integer region;           //工作省份（地区）
+    private Integer region;           //工作省份（地区），字典[省份]
     @ApiModelProperty("工作城市")
     private String city;              //工作城市
     @ApiModelProperty("岗位名称")
@@ -62,114 +62,122 @@ public class RecruitBean extends PersistentEntity {
     @ApiModelProperty("岗位个数")
     private Integer jobNumbers;       //岗位个数
     @ApiModelProperty("学历")
-    private Integer education;        //学历,字典【学历】
+    private Integer education;        //学历，字典[学历]
     @ApiModelProperty("职能类别")
     private Long functionCategoryId;  //职能类别，对象字典
     @ApiModelProperty("实习薪资")
-    private Integer probationSalary;  //实习薪资,字典【月薪】
+    private Integer probationSalary;  //实习薪资,字典[月薪]
     @ApiModelProperty("转正薪资")
-    private Integer salary;           //转正薪资,字典【月薪】
+    private Integer salary;           //转正薪资,字典[月薪]
     @ApiModelProperty("应用技术名称")
     private String appliedTechnology; //应用技术名称
     @ApiModelProperty("个人要求")
-    private String personRequires;    //个人要求，字典【个人要求】多个
+    private String personRequires;    //个人要求，字典[个人要求]多个
     @ApiModelProperty("工作类型")
-    private Integer jobType;          //工作类型
+    private Integer jobType;          //工作类型，字典[工作类型]
 
-    public String getCompanyCode() {
-        return companyCode;
+    public Long getEnterpriseId() {
+        return enterpriseId;
     }
 
-    public void setCompanyCode(String companyCode) {
-        this.companyCode = companyCode;
+    public void setEnterpriseId(Long enterpriseId) {
+        this.enterpriseId = enterpriseId;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public String getEnterpriseCode() {
+        return enterpriseCode;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+    public void setEnterpriseCode(String enterpriseCode) {
+        this.enterpriseCode = enterpriseCode;
     }
 
-    public String getCompanyEmail() {
-        return companyEmail;
+    public String getEnterpriseName() {
+        return enterpriseName;
     }
 
-    public void setCompanyEmail(String companyEmail) {
-        this.companyEmail = companyEmail;
+    public void setEnterpriseName(String enterpriseName) {
+        this.enterpriseName = enterpriseName;
     }
 
-    public String getCompanyPhone() {
-        return companyPhone;
+    public String getEnterpriseEmail() {
+        return enterpriseEmail;
     }
 
-    public void setCompanyPhone(String companyPhone) {
-        this.companyPhone = companyPhone;
+    public void setEnterpriseEmail(String enterpriseEmail) {
+        this.enterpriseEmail = enterpriseEmail;
     }
 
-    public String getCompanyMobile() {
-        return companyMobile;
+    public String getEnterprisePhone() {
+        return enterprisePhone;
     }
 
-    public void setCompanyMobile(String companyMobile) {
-        this.companyMobile = companyMobile;
+    public void setEnterprisePhone(String enterprisePhone) {
+        this.enterprisePhone = enterprisePhone;
     }
 
-    public Integer getCompanyNature() {
-        return companyNature;
+    public String getEnterpriseMobile() {
+        return enterpriseMobile;
     }
 
-    public void setCompanyNature(Integer companyNature) {
-        this.companyNature = companyNature;
+    public void setEnterpriseMobile(String enterpriseMobile) {
+        this.enterpriseMobile = enterpriseMobile;
     }
 
-    public String getCompanyScale() {
-        return companyScale;
+    public Integer getEnterpriseNature() {
+        return enterpriseNature;
     }
 
-    public void setCompanyScale(String companyScale) {
-        this.companyScale = companyScale;
+    public void setEnterpriseNature(Integer enterpriseNature) {
+        this.enterpriseNature = enterpriseNature;
     }
 
-    public Integer getCompanyIndustry() {
-        return companyIndustry;
+    public String getEnterpriseScale() {
+        return enterpriseScale;
     }
 
-    public void setCompanyIndustry(Integer companyIndustry) {
-        this.companyIndustry = companyIndustry;
+    public void setEnterpriseScale(String enterpriseScale) {
+        this.enterpriseScale = enterpriseScale;
     }
 
-    public String getCompanyLife() {
-        return companyLife;
+    public Integer getEnterpriseIndustry() {
+        return enterpriseIndustry;
     }
 
-    public void setCompanyLife(String companyLife) {
-        this.companyLife = companyLife;
+    public void setEnterpriseIndustry(Integer enterpriseIndustry) {
+        this.enterpriseIndustry = enterpriseIndustry;
     }
 
-    public Integer getCompanyRegion() {
-        return companyRegion;
+    public String getEnterpriseLife() {
+        return enterpriseLife;
     }
 
-    public void setCompanyRegion(Integer companyRegion) {
-        this.companyRegion = companyRegion;
+    public void setEnterpriseLife(String enterpriseLife) {
+        this.enterpriseLife = enterpriseLife;
     }
 
-    public String getCompanyCity() {
-        return companyCity;
+    public Integer getEnterpriseRegion() {
+        return enterpriseRegion;
     }
 
-    public void setCompanyCity(String companyCity) {
-        this.companyCity = companyCity;
+    public void setEnterpriseRegion(Integer enterpriseRegion) {
+        this.enterpriseRegion = enterpriseRegion;
     }
 
-    public String getCompanyAddress() {
-        return companyAddress;
+    public String getEnterpriseCity() {
+        return enterpriseCity;
     }
 
-    public void setCompanyAddress(String companyAddress) {
-        this.companyAddress = companyAddress;
+    public void setEnterpriseCity(String enterpriseCity) {
+        this.enterpriseCity = enterpriseCity;
+    }
+
+    public String getEnterpriseAddress() {
+        return enterpriseAddress;
+    }
+
+    public void setEnterpriseAddress(String enterpriseAddress) {
+        this.enterpriseAddress = enterpriseAddress;
     }
 
     public Date getPublishDate() {
