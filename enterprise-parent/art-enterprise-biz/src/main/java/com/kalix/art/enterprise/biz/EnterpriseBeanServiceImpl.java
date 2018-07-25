@@ -1,12 +1,9 @@
-package com.kalix.art.recruit.biz;
+package com.kalix.art.enterprise.biz;
 
-import com.kalix.art.recruit.api.biz.ICompanyBeanService;
-import com.kalix.art.recruit.api.dao.ICompanyBeanDao;
-import com.kalix.art.recruit.dto.model.CompanyDTO;
-import com.kalix.art.recruit.entities.CompanyBean;
-import com.kalix.framework.core.api.persistence.JsonData;
+import com.kalix.art.enterprise.api.biz.IEnterpriseBeanService;
+import com.kalix.art.enterprise.api.dao.IEnterpriseBeanDao;
+import com.kalix.art.enterprise.entities.EnterpriseBean;
 import com.kalix.framework.core.impl.biz.ShiroGenericBizServiceImpl;
-import com.kalix.framework.core.impl.dao.CommonMethod;
 
 /**
  * @类描述：
@@ -16,9 +13,9 @@ import com.kalix.framework.core.impl.dao.CommonMethod;
  * @修改时间：
  * @修改备注：
  */
-public class CompanyBeanServiceImpl extends ShiroGenericBizServiceImpl<ICompanyBeanDao, CompanyBean> implements ICompanyBeanService {
+public class EnterpriseBeanServiceImpl extends ShiroGenericBizServiceImpl<IEnterpriseBeanDao, EnterpriseBean> implements IEnterpriseBeanService {
 
-    @Override
+    /*@Override
     public JsonData getAllEntityByQuery(Integer page, Integer limit, String jsonStr, String sort) {
         // 通过dao层sql实现查找数据，无法增加数据权限，为解决此问题需要将dao层实现代码直接在biz里实现
         // return dao.getAllRelations(page, limit, jsonStr, sort);
@@ -36,5 +33,5 @@ public class CompanyBeanServiceImpl extends ShiroGenericBizServiceImpl<ICompanyB
         sql += CommonMethod.createWhereCondition(jsonStr, sort);
         jsonData = this.dao.findByNativeSql(sql, page, limit, CompanyDTO.class);
         return jsonData;
-    }
+    }*/
 }

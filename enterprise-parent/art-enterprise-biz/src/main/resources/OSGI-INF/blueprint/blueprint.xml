@@ -1,0 +1,14 @@
+<blueprint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.2.0"
+           xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+">
+    <tx:enable-annotations/>
+    <reference id="enterpriseBeanDao" interface="com.kalix.art.enterprise.api.dao.IEnterpriseBeanDao"/>
+
+    <bean id="enterpriseBeanServiceImpl" class="com.kalix.art.enterprise.biz.EnterpriseBeanServiceImpl">
+        <property name="dao" ref="enterpriseBeanDao"/>
+    </bean>
+    <service id="enterpriseBeanService" interface="com.kalix.art.enterprise.api.biz.IEnterpriseBeanService"
+             ref="enterpriseBeanServiceImpl"/>
+</blueprint>

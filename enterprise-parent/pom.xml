@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>art-parent</artifactId>
+        <groupId>com.kalix.art</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.kalix.art.enterprise</groupId>
+    <artifactId>enterprise-parent</artifactId>
+    <name>Kalix Art Enterprise</name>
+    <modules>
+        <module>art-enterprise-entities</module>
+        <module>art-enterprise-api</module>
+        <module>art-enterprise-dao</module>
+        <module>art-enterprise-biz</module>
+        <module>art-enterprise-rest</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.kalix.art.enterprise</groupId>
+                <artifactId>art-enterprise-entities</artifactId>
+                <version>${project.art.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.art.enterprise</groupId>
+                <artifactId>art-enterprise-api</artifactId>
+                <version>${project.art.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

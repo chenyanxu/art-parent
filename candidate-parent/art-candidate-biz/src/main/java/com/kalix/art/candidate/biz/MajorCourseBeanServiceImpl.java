@@ -29,12 +29,7 @@ import java.util.stream.Collectors;
  */
 public class MajorCourseBeanServiceImpl extends ShiroGenericBizServiceImpl<IMajorCourseBeanDao, MajorCourseBean> implements IMajorCourseBeanService {
     private JsonStatus jsonStatus = new JsonStatus();
-    private IMajorCourseBeanDao majorCourseBeanDao;
     private IOrganizationBeanDao orgDao;
-
-    public void setMajorCourseBeanDao(IMajorCourseBeanDao majorCourseBeanDao) {
-        this.majorCourseBeanDao = majorCourseBeanDao;
-    }
 
     public void setOrgDao(IOrganizationBeanDao orgDao) {
         this.orgDao = orgDao;

@@ -1,8 +1,7 @@
-package com.kalix.art.recruit.api.biz;
+package com.kalix.art.enterprise.api.biz;
 
-import com.kalix.art.recruit.entities.CompanyBean;
+import com.kalix.art.enterprise.entities.EnterpriseBean;
 import com.kalix.framework.core.api.biz.IBizService;
-import com.kalix.framework.core.api.persistence.JsonData;
 
 /**
  * @类描述：应用服务接口.
@@ -12,6 +11,6 @@ import com.kalix.framework.core.api.persistence.JsonData;
  * @修改时间：
  * @修改备注：
  */
-public interface ICompanyBeanService extends IBizService<CompanyBean> {
+public interface IEnterpriseBeanService extends IBizService<EnterpriseBean> {
     //在此添加新的业务方法
 }

@@ -1,12 +1,8 @@
-package com.kalix.art.recruit.dao;
+package com.kalix.art.enterprise.dao;
 
-import com.kalix.art.recruit.api.dao.ICompanyBeanDao;
-import com.kalix.art.recruit.dto.model.CompanyDTO;
-import com.kalix.art.recruit.entities.CompanyBean;
-import com.kalix.framework.core.api.persistence.JsonData;
-import com.kalix.framework.core.impl.dao.CommonMethod;
+import com.kalix.art.enterprise.api.dao.IEnterpriseBeanDao;
+import com.kalix.art.enterprise.entities.EnterpriseBean;
 import com.kalix.framework.core.impl.dao.GenericDao;
-import org.apache.commons.lang.StringUtils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -20,14 +16,14 @@ import javax.persistence.PersistenceContext;
  * @修改备注：
  */
 //@Transactional
-public class CompanyBeanDaoImpl extends GenericDao<CompanyBean, Long> implements ICompanyBeanDao {
+public class EnterpriseBeanDaoImpl extends GenericDao<EnterpriseBean, Long> implements IEnterpriseBeanDao {
     @Override
-    @PersistenceContext(unitName = "art-recruit-cm")
+    @PersistenceContext(unitName = "art-enterprise-cm")
     public void setEntityManager(EntityManager em) {
         super.setEntityManager(em);
     }
 
-    @Override
+    /*@Override
     public JsonData getAllRelations(Integer page, Integer limit, String jsonStr, String sort) {
         JsonData jsonData = new JsonData();
         // 通过用户表和企业表，关联查询企业信息（用户表左关联企业表，即用户注册即存在企业信息）
@@ -39,5 +35,5 @@ public class CompanyBeanDaoImpl extends GenericDao<CompanyBean, Long> implements
         sql += CommonMethod.createWhereCondition(jsonStr, sort);
         jsonData = this.findByNativeSql(sql, page, limit, CompanyDTO.class);
         return jsonData;
-    }
+    }*/
 }

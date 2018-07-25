@@ -3,16 +3,16 @@
            xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
            xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
        http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
-    <reference id="companyService" interface="com.kalix.art.recruit.api.biz.ICompanyBeanService"/>
+    <reference id="enterpriseService" interface="com.kalix.art.enterprise.api.biz.IEnterpriseBeanService"/>
 
-    <bean id="companyRoute" class="com.kalix.framework.core.impl.camel.BaseRouteBuilder">
-        <property name="beanName" value="com.kalix.art.recruit.entities.CompanyBean"/>
+    <bean id="enterpriseRoute" class="com.kalix.framework.core.impl.camel.BaseRouteBuilder">
+        <property name="beanName" value="com.kalix.art.enterprise.entities.EnterpriseBean"/>
         <property name="rests">
             <list>
             </list>
         </property>
     </bean>
-    <camelContext id="companyCamel" xmlns="http://camel.apache.org/schema/blueprint">
-        <routeBuilder ref="companyRoute"/>
+    <camelContext id="enterpriseCamel" xmlns="http://camel.apache.org/schema/blueprint">
+        <routeBuilder ref="enterpriseRoute"/>
     </camelContext>
 </blueprint>

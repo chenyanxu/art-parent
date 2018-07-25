@@ -1,4 +1,4 @@
-package com.kalix.art.recruit.dto.model;
+package com.kalix.art.enterprise.api.model;
 
 import com.kalix.framework.core.api.web.model.BaseDTO;
 
@@ -7,7 +7,7 @@ import com.kalix.framework.core.api.web.model.BaseDTO;
  * @author hqj date:2017-12-13
  * @version 1.0.0
  */
-public class CompanyDTO extends BaseDTO {
+public class EnterpriseDTO extends BaseDTO {
     private Long userId;           //与用户关联id
     private String code;      //企业组织机构代码
     private String name;      //企业名称

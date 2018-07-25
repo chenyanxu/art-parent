@@ -15,7 +15,6 @@
     <description>Art Rest Service</description>
     <packaging>bundle</packaging>
 
-
     <properties>
         <bundle.symbolicName>com.kalix.art.recruit.rest</bundle.symbolicName>
     </properties>

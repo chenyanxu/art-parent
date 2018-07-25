@@ -1,63 +1,39 @@
-package com.kalix.art.recruit.entities;
+package com.kalix.art.enterprise.entities;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.kalix.framework.core.api.persistence.PersistentEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Transient;
-import java.util.Date;
 
 /**
- * @类描述： 企业实体类
- * @创建人：
- * @创建时间：
- * @修改人：
- * @修改时间：
- * @修改备注：
+ * Created by Administrator on 2018/7/25.
  */
 @Entity
-@Table(name = "art_company")
-@ApiModel("企业<br>CompanyBean")
-public class CompanyBean extends PersistentEntity {
-    @ApiModelProperty("用户id")
-    @Column(unique = true)
-    private Long userId;           //与用户关联id
-    @Transient
-    private String code;      //企业组织机构代码
-    @Transient
-    private String name;      //企业名称
-    @Transient
-    private String email;     //邮箱
-    @Transient
-    private String phone;     //固定电话
-    @Transient
-    private String mobile;    //手机
+@Table(name = "art_enterprise")
+@ApiModel("企业<br>EnterpriseBean")
+public class EnterpriseBean extends PersistentEntity {
+    // @Column(unique = true)
+    private String code;        // 企业组织机构代码
+    private String name;        // 企业名称
+    private String email;       // 邮箱
+    private String phone;       // 固定电话
+    private String mobile;      // 手机
     @ApiModelProperty("企业性质")
-    private Integer nature;        //企业性质，字典
+    private Integer nature;     // 企业性质，字典[企业性质]
     @ApiModelProperty("企业规模")
-    private String scale;          //企业规模
+    private String scale;       // 企业规模
     @ApiModelProperty("企业行业")
-    private Integer industry;      //企业行业，字典
+    private Integer industry;   // 企业行业，字典[企业行业]
     @ApiModelProperty("企业年限")
-    private String life;           //企业年限
+    private String life;        // 企业年限
     @ApiModelProperty("省份")
-    private Integer region;        //省份（地区）
+    private Integer region;     // 省份（地区），字典[省份]
     @ApiModelProperty("城市")
-    private String city;           //城市
+    private String city;        // 城市
     @ApiModelProperty("企业详细地址")
-    private String address;        //企业详细地址
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+    private String address;     // 企业详细地址
 
     public String getCode() {
         return code;
