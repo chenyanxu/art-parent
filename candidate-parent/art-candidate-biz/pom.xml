@@ -25,11 +25,10 @@
             <groupId>com.kalix.art.candidate</groupId>
             <artifactId>art-candidate-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.kalix.general.person</groupId>
+            <artifactId>general-person-api</artifactId>
+            <version>${project.general.version}</version>
+        </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-        </plugins>
-    </build>
-
 </project>

@@ -5,12 +5,14 @@
 ">
     <tx:enable-annotations/>
     <reference id="candidateBeanDao" interface="com.kalix.art.candidate.api.dao.ICandidateBeanDao"/>
+    <reference id="studentBeanService" interface="com.kalix.general.person.api.biz.IStudentBeanService"/>
     <reference id="majorCourseBeanDao" interface="com.kalix.art.candidate.api.dao.IMajorCourseBeanDao"/>
     <reference id="orgBeanDao" interface="com.kalix.admin.core.api.dao.IOrganizationBeanDao"/>
     <reference id="scoreBeanDao" interface="com.kalix.art.candidate.api.dao.IScoreBeanDao"/>
 
     <bean id="candidateBeanServiceImpl" class="com.kalix.art.candidate.biz.CandidateBeanServiceImpl">
         <property name="dao" ref="candidateBeanDao"/>
+        <property name="studentBeanService" ref="studentBeanService"/>
     </bean>
     <service id="candidateBeanService" interface="com.kalix.art.candidate.api.biz.ICandidateBeanService"
              ref="candidateBeanServiceImpl"/>
