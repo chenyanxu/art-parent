@@ -5,9 +5,9 @@ import com.kalix.art.candidate.api.dao.ICandidateBeanDao;
 import com.kalix.art.candidate.entities.CandidateBean;
 import com.kalix.framework.core.api.persistence.JsonData;
 import com.kalix.framework.core.impl.biz.ShiroGenericBizServiceImpl;
+import com.kalix.framework.core.util.StringUtils;
 import com.kalix.general.person.api.biz.IStudentBeanService;
 import com.kalix.general.person.entities.StudentBean;
-import org.apache.commons.lang.StringUtils;
 
 /**
  * @类描述：
@@ -22,7 +22,7 @@ public class CandidateBeanServiceImpl extends ShiroGenericBizServiceImpl<ICandid
 
     @Override
     public JsonData getAllEntityByQuery(Integer page, Integer limit, String jsonStr, String sort) {
-        if (StringUtils.isBlank(sort)) {
+        if (StringUtils.isEmpty(sort)) {
             sort = "[{'property': 'creationDate', 'direction': 'DESC'}]";
         }
         JsonData jsonData = super.getAllEntityByQuery(page, limit, jsonStr, sort);
